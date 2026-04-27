@@ -406,264 +406,264 @@
 | Missile Configuration | ProceduralMissileData | burnTime | 发动机燃烧时间比例 | float (0~1) |
 | Missile Configuration | ProceduralMissileData | engine | 导弹发动机类型 | 枚举(MissileEngineType: Solid、ThrustVector、Jet) |
 | Missile Configuration | ProceduralMissileData | nose | 程序化导弹鼻锥样式ID（可选覆盖） | string |
-| Missile Configuration | ProceduralMissileData | noseLength | 零件功能相关属性配置 | float |
+| Missile Configuration | ProceduralMissileData | noseLength | 导弹头部长度。 | float |
 | Missile Configuration | ProceduralMissileData | radius | 半径/作用半径 | float |
 | Missile Configuration | ProceduralMissileData | seeker | 导引头/目标搜索参数 | 枚举(SeekerType: Unguided、Infrared、SemiActiveRadar、ActiveRadar、Laser、AntiRadiation) |
 | Missile Configuration | ProceduralMissileData | seekerFOV | 导引头/目标搜索参数 | float |
 | Missile Configuration | ProceduralMissileData | size | 尺寸/大小 | float |
-| Missile Configuration | ProceduralMissileData | updateMissileModifier | 零件功能相关属性配置 | bool |
-| Missile Configuration | ProceduralMissileData | warheadBias | 零件功能相关属性配置 | float |
+| Missile Configuration | ProceduralMissileData | updateMissileModifier | 参数变更后刷新导弹修正器。 | bool |
+| Missile Configuration | ProceduralMissileData | warheadBias | 战斗部位置偏置参数。 | float |
 | Nosecone | AdaptiveNoseConeData | scale | 缩放比例/系数 | Vector3(x,y,z) |
 | Parachute | ParachuteData | activationGroup | 激活组索引，用于通过按键或标签控制零件状态 | string |
 | Parachute | ParachuteData | size | 尺寸/大小 | float |
-| Parachute | ParachuteData | style | 零件功能相关属性配置 | string |
-| Part Targeting | PartTargetingData | customPartIds | 零件功能相关属性配置 | int列表(逗号分隔) |
-| Part Targeting | PartTargetingData | partIds | 零件功能相关属性配置 | int列表(逗号分隔) |
-| Part Targeting | PartTargetingData | targetMode | 零件功能相关属性配置 | 枚举(PartTargetingMode: SinglePart、MultipleParts、Custom) |
-| Pedal | PedalData | fullAngle | 零件功能相关属性配置 | float |
+| Parachute | ParachuteData | style | 降落伞样式。 | string |
+| Part Targeting | PartTargetingData | customPartIds | 自定义目标零件ID列表。 | int列表(逗号分隔) |
+| Part Targeting | PartTargetingData | partIds | 引用零件ID列表。 | int列表(逗号分隔) |
+| Part Targeting | PartTargetingData | targetMode | 零件目标选择模式。 | 枚举(PartTargetingMode: SinglePart、MultipleParts、Custom) |
+| Pedal | PedalData | fullAngle | 全行程角度。 | float |
 | Pedal | PedalData | input | 输入源/控制器绑定名称 | string |
-| Pedal | PedalData | zeroAngle | 零件功能相关属性配置 | float |
-| Piston | PistonData | attachPoint | 零件功能相关属性配置 | int |
-| Piston | PistonData | cycle | 零件功能相关属性配置 | bool |
-| Piston | PistonData | extend | 零件功能相关属性配置 | bool |
+| Pedal | PedalData | zeroAngle | 零位角度。 | float |
+| Piston | PistonData | attachPoint | 活塞移动端连接点索引。 | int |
+| Piston | PistonData | cycle | 是否循环往复运动。 | bool |
+| Piston | PistonData | extend | 活塞运动方向（推/拉）。 | bool |
 | Piston | PistonData | maxRange | 最大值限制 | float |
 | Piston | PistonData | maxSpeed | 最大值限制 | float |
-| Piston | PistonData | preventBreaking | 零件功能相关属性配置 | bool |
+| Piston | PistonData | preventBreaking | 是否启用防断裂保护。 | bool |
 | Piston | PistonData | range | 范围/行程/边界值 | float |
 | Piston | PistonData | speed | 运动或响应速度 | float |
-| Posed Grip | PosedGripData | asButton | 零件功能相关属性配置 | bool |
-| Posed Grip | PosedGripData | colliders | 零件功能相关属性配置 | string |
-| Posed Grip | PosedGripData | control | 零件功能相关属性配置 | string |
-| Posed Grip | PosedGripData | controlPath | 零件功能相关属性配置 | string |
-| Posed Grip | PosedGripData | disableTooltip | 零件功能相关属性配置 | bool |
+| Posed Grip | PosedGripData | asButton | 是否按按钮模式处理输入。 | bool |
+| Posed Grip | PosedGripData | colliders | 碰撞体路径列表（逗号分隔）。 | string |
+| Posed Grip | PosedGripData | control | 控制绑定名称。 | string |
+| Posed Grip | PosedGripData | controlPath | XR控制路径。 | string |
+| Posed Grip | PosedGripData | disableTooltip | 禁用提示文本显示。 | bool |
 | Posed Grip | PosedGripData | gripTarget | 抓地力/摩擦力系数 | string |
 | Posed Grip | PosedGripData | gripType | 抓地力/摩擦力系数 | 枚举(XRControlGripType: Default、FlightStick、Throttle) |
 | Posed Grip | PosedGripData | outlineScale | 缩放比例/系数 | Vector3(x,y,z) |
-| Posed Grip | PosedGripData | pose | 零件功能相关属性配置 | string |
-| Posed Grip | PosedGripData | previewPose | 零件功能相关属性配置 | string |
-| Posed Grip | PosedGripData | processor | 零件功能相关属性配置 | string |
-| Posed Grip | PosedGripData | tooltip | 零件功能相关属性配置 | string |
-| Posed Grip | PosedGripData | tooltipOffset | 零件功能相关属性配置 | float |
-| Posed Grip | PosedGripData | tooltipTransformPath | 零件功能相关属性配置 | string |
-| Procedural Bay | ProceduralBayData | doorStyle | 零件功能相关属性配置 | 枚举(DoorStyle: 无、SingleLeft、SingleRight、Double) |
-| Procedural Bay | ProceduralBayData | startOpen | 零件功能相关属性配置 | bool |
-| Procedural Window | ProceduralWindowData | hideGlass | 零件功能相关属性配置 | bool |
-| Propeller Engine | PropEngineAdvancedData | legacyCotPos | 零件功能相关属性配置 | bool |
-| Propellers | PropellerAssemblyData | bladeBlurCount | 零件功能相关属性配置 | int |
-| Propellers | PropellerAssemblyData | bladeBlurSpread | 零件功能相关属性配置 | float |
-| Propellers | PropellerAssemblyData | bladeCount | 零件功能相关属性配置 | int |
+| Posed Grip | PosedGripData | pose | 抓握姿态名称。 | string |
+| Posed Grip | PosedGripData | previewPose | 编辑器预览姿态。 | string |
+| Posed Grip | PosedGripData | processor | 输入处理器表达式。 | string |
+| Posed Grip | PosedGripData | tooltip | 提示文本。 | string |
+| Posed Grip | PosedGripData | tooltipOffset | 提示偏移值。 | float |
+| Posed Grip | PosedGripData | tooltipTransformPath | 提示锚点变换路径。 | string |
+| Procedural Bay | ProceduralBayData | doorStyle | 舱门开启样式。 | 枚举(DoorStyle: 无、SingleLeft、SingleRight、Double) |
+| Procedural Bay | ProceduralBayData | startOpen | 是否初始为开启状态。 | bool |
+| Procedural Window | ProceduralWindowData | hideGlass | 是否隐藏玻璃层。 | bool |
+| Propeller Engine | PropEngineAdvancedData | legacyCotPos | 是否使用旧版推力中心位置逻辑。 | bool |
+| Propellers | PropellerAssemblyData | bladeBlurCount | 桨叶模糊段数量。 | int |
+| Propellers | PropellerAssemblyData | bladeBlurSpread | 桨叶模糊扩散范围。 | float |
+| Propellers | PropellerAssemblyData | bladeCount | 桨叶数量。 | int |
 | Propellers | PropellerAssemblyData | chordRadiusRatio | 半径/作用半径 | float |
 | Propellers | PropellerAssemblyData | chordScale | 缩放比例/系数 | float |
-| Propellers | PropellerAssemblyData | defaultDiameter | 零件功能相关属性配置 | float |
-| Propellers | PropellerAssemblyData | density | 零件功能相关属性配置 | float |
+| Propellers | PropellerAssemblyData | defaultDiameter | 默认螺旋桨直径。 | float |
+| Propellers | PropellerAssemblyData | density | 密度参数。 | float |
 | Propellers | PropellerAssemblyData | dragScalar | 阻力相关参数 | float |
-| Propellers | PropellerAssemblyData | hub | 零件功能相关属性配置 | string |
+| Propellers | PropellerAssemblyData | hub | 桨毂样式或资源ID。 | string |
 | Propellers | PropellerAssemblyData | hubScale | 缩放比例/系数 | float |
-| Propellers | PropellerAssemblyData | isWaterProp | 零件功能相关属性配置 | bool |
-| Propellers | PropellerAssemblyData | magicEngineId | 零件功能相关属性配置 | int |
+| Propellers | PropellerAssemblyData | isWaterProp | 是否为水上螺旋桨。 | bool |
+| Propellers | PropellerAssemblyData | magicEngineId | 关联发动机ID。 | int |
 | Propellers | PropellerAssemblyData | maxPitch | 最大值限制 | float |
-| Propellers | PropellerAssemblyData | pitchControlType | 零件功能相关属性配置 | 枚举(PropellerAssemblyData.PitchControl: Auto、Fixed、Manual) |
-| Propellers | PropellerAssemblyData | propeller | 零件功能相关属性配置 | string |
-| Propellers | PropellerAssemblyData | pushProp | 零件功能相关属性配置 | bool |
-| Propellers | PropellerAssemblyData | reverseBladeDirection | 零件功能相关属性配置 | bool |
+| Propellers | PropellerAssemblyData | pitchControlType | 螺旋桨桨距控制模式。 | 枚举(PropellerAssemblyData.PitchControl: Auto、Fixed、Manual) |
+| Propellers | PropellerAssemblyData | propeller | 螺旋桨样式/资源ID。 | string |
+| Propellers | PropellerAssemblyData | pushProp | 是否使用推式布局。 | bool |
+| Propellers | PropellerAssemblyData | reverseBladeDirection | 是否反转桨叶旋转方向。 | bool |
 | Propellers | PropellerAssemblyData | size | 尺寸/大小 | float |
 | Propellers | PropellerAssemblyData | thrustScalar | 推力大小 | float |
-| Propellers | PropellerAssemblyData | twistAngleRoot | 零件功能相关属性配置 | float |
+| Propellers | PropellerAssemblyData | twistAngleRoot | 根部桨叶扭转角。 | float |
 | Reaction Control Nozzle | ReactionControlNozzleData | activationGroup | 激活组索引，用于通过按键或标签控制零件状态 | string |
-| Reaction Control Nozzle | ReactionControlNozzleData | autoAssignType | 零件功能相关属性配置 | bool |
-| Reaction Control Nozzle | ReactionControlNozzleData | fuelConsumptionRate | 零件功能相关属性配置 | float |
+| Reaction Control Nozzle | ReactionControlNozzleData | autoAssignType | 是否自动识别喷口控制轴类型。 | bool |
+| Reaction Control Nozzle | ReactionControlNozzleData | fuelConsumptionRate | 燃料消耗速率。 | float |
 | Reaction Control Nozzle | ReactionControlNozzleData | power | 功率/强度百分比 | float |
-| Reaction Control Nozzle | ReactionControlNozzleData | reverse | 零件功能相关属性配置 | bool |
-| Reaction Control Nozzle | ReactionControlNozzleData | type | 零件功能相关属性配置 | 枚举(ReactionControlNozzleType: Pitch、Roll、Yaw) |
+| Reaction Control Nozzle | ReactionControlNozzleData | reverse | 是否反向输出方向。 | bool |
+| Reaction Control Nozzle | ReactionControlNozzleData | type | RCS喷口轴向类型（俯仰/横滚/偏航）。 | 枚举(ReactionControlNozzleType: Pitch、Roll、Yaw) |
 | Refuel Drouge | RefuelDrogueData | activationGroup | 激活组索引，用于通过按键或标签控制零件状态 | string |
 | Refuel Drouge | RefuelDrogueData | angularDragPower | 阻力相关参数 | float |
-| Refuel Drouge | RefuelDrogueData | angularStabPower | 零件功能相关属性配置 | float |
-| Refuel Drouge | RefuelDrogueData | transferRate | 零件功能相关属性配置 | float |
-| Refuel Drouge | RefuelDrogueData | triggerColliderPath | 零件功能相关属性配置 | string |
+| Refuel Drouge | RefuelDrogueData | angularStabPower | 角向稳定强度。 | float |
+| Refuel Drouge | RefuelDrogueData | transferRate | 传输速率。 | float |
+| Refuel Drouge | RefuelDrogueData | triggerColliderPath | 触发碰撞体路径。 | string |
 | Refuel Probe | RefuelProbeData | offset | 位置偏移量 | Vector2(x,y) |
 | Resizable Shape | ResizableShapeData | attachPointPosition | 空间坐标位置 | Vector3(x,y,z) |
-| Resizable Shape | ResizableShapeData | bounciness | 零件功能相关属性配置 | float |
-| Resizable Shape | ResizableShapeData | friction | 零件功能相关属性配置 | float |
+| Resizable Shape | ResizableShapeData | bounciness | 弹性系数。 | float |
+| Resizable Shape | ResizableShapeData | friction | 摩擦系数。 | float |
 | Resizable Shape | ResizableShapeData | size | 尺寸/大小 | float (runtime radius = value/4) |
 | Rocket | RocketWeaponData | activationGroup | 激活组索引，用于通过按键或标签控制零件状态 | string |
 | Rocket | RocketWeaponData | burnTimer | 时间参数（时长/周期） | float |
 | Rocket | RocketWeaponData | explosionScale | 缩放比例/系数 | float |
-| Rocket | RocketWeaponData | finMode | 零件功能相关属性配置 | string |
+| Rocket | RocketWeaponData | finMode | 尾翼模式/配置标记。 | string |
 | Rocket | RocketWeaponData | firingDelay | 延迟/滞后时间 | float |
-| Rocket | RocketWeaponData | laserGuided | 零件功能相关属性配置 | bool |
-| Rocket | RocketWeaponData | name | 零件功能相关属性配置 | string |
+| Rocket | RocketWeaponData | laserGuided | 是否启用激光制导。 | bool |
+| Rocket | RocketWeaponData | name | 火箭武器自定义名称。 | string |
 | Rocket | RocketWeaponData | selfDestructTimer | 时间参数（时长/周期） | float |
 | Rocket Pod | RocketPodData | activationGroup | 激活组索引，用于通过按键或标签控制零件状态 | string |
 | Rocket Pod | RocketPodData | explosionScale | 缩放比例/系数 | float |
 | Rocket Pod | RocketPodData | firingDelay | 延迟/滞后时间 | float |
-| Rocket Pod | RocketPodData | laserGuided | 零件功能相关属性配置 | bool |
-| Rocket Pod | RocketPodData | name | 零件功能相关属性配置 | string |
-| Rotator | JointRotatorData | allowFreeSpin | 零件功能相关属性配置 | bool |
-| Rotator | JointRotatorData | attachPoint | 零件功能相关属性配置 | int |
-| Rotator | JointRotatorData | audio | 零件功能相关属性配置 | bool |
-| Rotator | JointRotatorData | damperMultiplier | 零件功能相关属性配置 | float |
-| Rotator | JointRotatorData | disableBaseMesh | 零件功能相关属性配置 | bool |
-| Rotator | JointRotatorData | hingeOffset | 零件功能相关属性配置 | Vector3(x,y,z) |
+| Rocket Pod | RocketPodData | laserGuided | 是否启用激光制导。 | bool |
+| Rocket Pod | RocketPodData | name | 火箭吊舱自定义名称。 | string |
+| Rotator | JointRotatorData | allowFreeSpin | 是否允许自由旋转。 | bool |
+| Rotator | JointRotatorData | attachPoint | 旋转关节连接点索引。 | int |
+| Rotator | JointRotatorData | audio | 是否启用旋转音效。 | bool |
+| Rotator | JointRotatorData | damperMultiplier | 阻尼倍率。 | float |
+| Rotator | JointRotatorData | disableBaseMesh | 是否隐藏基座网格。 | bool |
+| Rotator | JointRotatorData | hingeOffset | 铰链偏移量。 | Vector3(x,y,z) |
 | Rotator | JointRotatorData | maxRange | 最大值限制 | int |
 | Rotator | JointRotatorData | maxSpeed | 最大值限制 | float |
 | Rotator | JointRotatorData | minRange | 最小值限制 | int |
 | Rotator | JointRotatorData | range | 范围/行程/边界值 | float |
-| Rotator | JointRotatorData | shortestAngle | 零件功能相关属性配置 | bool |
+| Rotator | JointRotatorData | shortestAngle | 旋转时是否走最短角度路径。 | bool |
 | Rotator | JointRotatorData | speed | 运动或响应速度 | float |
-| Rotator | JointRotatorData | supportsDisableBaseMesh | 零件功能相关属性配置 | bool |
-| Seat | SeatData | animation | 零件功能相关属性配置 | string |
+| Rotator | JointRotatorData | supportsDisableBaseMesh | 是否支持隐藏基座网格。 | bool |
+| Seat | SeatData | animation | 动画状态/资源名称。 | string |
 | Seat | SeatData | exitPosition | 空间坐标位置 | Vector3(x,y,z) |
 | Seat | SeatData | exitRotation | 旋转角度/姿态 | Vector3(x,y,z) |
-| Seat | SeatData | primarySeat | 零件功能相关属性配置 | bool |
-| Seat | SeatData | reclination | 零件功能相关属性配置 | float |
+| Seat | SeatData | primarySeat | 是否为主座位。 | bool |
+| Seat | SeatData | reclination | 座椅后仰幅度。 | float |
 | Seat | SeatData | seatedPosition | 空间坐标位置 | Vector3(x,y,z) |
 | Seat | SeatData | seatedRotation | 旋转角度/姿态 | Vector3(x,y,z) |
-| Seat IK | IKSeatData | bodyTarget | 零件功能相关属性配置 | int |
-| Seat IK | IKSeatData | designerCharacter | 零件功能相关属性配置 | string |
-| Seat IK | IKSeatData | fpvTracking | 零件功能相关属性配置 | bool |
-| Seat IK | IKSeatData | leftElbowTarget | 零件功能相关属性配置 | int |
-| Seat IK | IKSeatData | leftFootTarget | 零件功能相关属性配置 | int |
-| Seat IK | IKSeatData | leftHandTarget | 零件功能相关属性配置 | int |
-| Seat IK | IKSeatData | leftKneeTarget | 零件功能相关属性配置 | int |
-| Seat IK | IKSeatData | leftShoulderTarget | 零件功能相关属性配置 | int |
+| Seat IK | IKSeatData | bodyTarget | 身体IK目标。 | int |
+| Seat IK | IKSeatData | designerCharacter | 设计器角色ID。 | string |
+| Seat IK | IKSeatData | fpvTracking | 是否启用第一人称跟踪。 | bool |
+| Seat IK | IKSeatData | leftElbowTarget | 左肘IK目标。 | int |
+| Seat IK | IKSeatData | leftFootTarget | 左脚IK目标。 | int |
+| Seat IK | IKSeatData | leftHandTarget | 左手IK目标。 | int |
+| Seat IK | IKSeatData | leftKneeTarget | 左膝IK目标。 | int |
+| Seat IK | IKSeatData | leftShoulderTarget | 左肩IK目标。 | int |
 | Seat IK | IKSeatData | maintainHeadRotation | 旋转角度/姿态 | float |
-| Seat IK | IKSeatData | rightElbowTarget | 零件功能相关属性配置 | int |
-| Seat IK | IKSeatData | rightFootTarget | 零件功能相关属性配置 | int |
-| Seat IK | IKSeatData | rightHandTarget | 零件功能相关属性配置 | int |
-| Seat IK | IKSeatData | rightKneeTarget | 零件功能相关属性配置 | int |
-| Seat IK | IKSeatData | rightShoulderTarget | 零件功能相关属性配置 | int |
-| Seat IK | IKSeatData | selfAssignTargets | 零件功能相关属性配置 | bool |
-| Seat IK | IKSeatData | snapRange | 零件功能相关属性配置 | float |
-| Suspension | SuspensionData | attachPoint | 零件功能相关属性配置 | int |
-| Suspension | SuspensionData | damper | 零件功能相关属性配置 | float |
-| Suspension | SuspensionData | spring | 零件功能相关属性配置 | float |
-| Switch | CockpitSwitchData | angleOff | 零件功能相关属性配置 | float |
-| Switch | CockpitSwitchData | angleOn | 零件功能相关属性配置 | float |
-| Switch | CockpitSwitchData | axis | 零件功能相关属性配置 | Vector3(x,y,z) |
-| Switch | CockpitSwitchData | disableTooltip | 零件功能相关属性配置 | bool |
-| Switch | CockpitSwitchData | inputId | 零件功能相关属性配置 | string |
-| Switch | CockpitSwitchData | outputValue | 零件功能相关属性配置 | float |
+| Seat IK | IKSeatData | rightElbowTarget | 右肘IK目标。 | int |
+| Seat IK | IKSeatData | rightFootTarget | 右脚IK目标。 | int |
+| Seat IK | IKSeatData | rightHandTarget | 右手IK目标。 | int |
+| Seat IK | IKSeatData | rightKneeTarget | 右膝IK目标。 | int |
+| Seat IK | IKSeatData | rightShoulderTarget | 右肩IK目标。 | int |
+| Seat IK | IKSeatData | selfAssignTargets | 是否自动分配IK目标。 | bool |
+| Seat IK | IKSeatData | snapRange | IK吸附范围。 | float |
+| Suspension | SuspensionData | attachPoint | 悬挂连接点索引。 | int |
+| Suspension | SuspensionData | damper | 阻尼系数。 | float |
+| Suspension | SuspensionData | spring | 弹簧刚度。 | float |
+| Switch | CockpitSwitchData | angleOff | 关闭状态角度。 | float |
+| Switch | CockpitSwitchData | angleOn | 开启状态角度。 | float |
+| Switch | CockpitSwitchData | axis | 轴向映射。 | Vector3(x,y,z) |
+| Switch | CockpitSwitchData | disableTooltip | 禁用提示文本显示。 | bool |
+| Switch | CockpitSwitchData | inputId | 输入标识符。 | string |
+| Switch | CockpitSwitchData | outputValue | 输出值。 | float |
 | Switch | CockpitSwitchData | positionTransitionDelay | 延迟/滞后时间 | float |
 | Switch | CockpitSwitchData | positionTransitionTime | 时间参数（时长/周期） | float |
 | Switch | CockpitSwitchData | scale | 缩放比例/系数 | float |
-| Switch | CockpitSwitchData | style | 零件功能相关属性配置 | 枚举(CockpitSwitchData.CockpitSwitchStyle: Default、Flip、Rocker、Pivot) |
-| Switch | CockpitSwitchData | tooltip | 零件功能相关属性配置 | string |
-| Tail Rotor | HeliTailRotorData | linkageSpeed | 零件功能相关属性配置 | float |
-| Tail Rotor | HeliTailRotorData | pidGainsHeadingHold | 零件功能相关属性配置 | Vector3(x,y,z) |
-| Tail Rotor | HeliTailRotorData | pidGainsRate | 零件功能相关属性配置 | Vector3(x,y,z) |
-| Tail Rotor | HeliTailRotorData | tailMode | 零件功能相关属性配置 | 枚举(HeliTailRotorData.TailModeType: HeadingHold、Rate、Manual) |
-| Tail Rotor | HeliTailRotorData | tailSpeed | 零件功能相关属性配置 | float |
+| Switch | CockpitSwitchData | style | 驾驶舱开关样式。 | 枚举(CockpitSwitchData.CockpitSwitchStyle: Default、Flip、Rocker、Pivot) |
+| Switch | CockpitSwitchData | tooltip | 提示文本。 | string |
+| Tail Rotor | HeliTailRotorData | linkageSpeed | 联动响应速度。 | float |
+| Tail Rotor | HeliTailRotorData | pidGainsHeadingHold | 航向保持PID增益。 | Vector3(x,y,z) |
+| Tail Rotor | HeliTailRotorData | pidGainsRate | 速率控制PID增益。 | Vector3(x,y,z) |
+| Tail Rotor | HeliTailRotorData | tailMode | 尾桨模式。 | 枚举(HeliTailRotorData.TailModeType: HeadingHold、Rate、Manual) |
+| Tail Rotor | HeliTailRotorData | tailSpeed | 尾桨响应速度。 | float |
 | Tail Rotor | HeliTailRotorData | trimScale | 缩放比例/系数 | float |
 | Targeting Pod | TargetingPodData | activationGroup | 激活组索引，用于通过按键或标签控制零件状态 | string |
 | Targeting Pod | TargetingPodData | defaultActivationGroup | 默认激活组，零件初始化所属的激活组 | string |
 | Targeting Pod | TargetingPodData | maxDistance | 最大作用距离 | float |
 | Targeting Pod | TargetingPodData | offset | 位置偏移量 | Vector3(x,y,z) |
-| Text Decal | TextDecalData | alignH | 零件功能相关属性配置 | 枚举(TextDecalData.HorizontalTextAlignment: Center、Left、Right、Stretch) |
-| Text Decal | TextDecalData | alignV | 零件功能相关属性配置 | 枚举(TextDecalData.VerticalTextAlignment: Center、Top、Bottom) |
-| Text Decal | TextDecalData | font | 零件功能相关属性配置 | 枚举(TextDecalData.FontStyle: Default、Roboto、Military、FourteenSegment、Stencil) |
+| Text Decal | TextDecalData | alignH | 文本水平对齐方式。 | 枚举(TextDecalData.HorizontalTextAlignment: Center、Left、Right、Stretch) |
+| Text Decal | TextDecalData | alignV | 文本垂直对齐方式。 | 枚举(TextDecalData.VerticalTextAlignment: Center、Top、Bottom) |
+| Text Decal | TextDecalData | font | 字体样式。 | 枚举(TextDecalData.FontStyle: Default、Roboto、Military、FourteenSegment、Stencil) |
 | Text Decal | TextDecalData | fontSize | 尺寸/大小 | float |
-| Text Decal | TextDecalData | text | 零件功能相关属性配置 | string |
+| Text Decal | TextDecalData | text | 显示文本。 | string |
 | Thrust Port | EngineThrustPortData | exhaustScale | 缩放比例/系数 | Vector3(x,y,z) |
 | Torpedo | TorpedoData | （无） | 该零件未在自身 State 中读取独有属性，主要沿用父类或公共层逻辑 | 无 |
-| Transmission | JTransmissionData | customGearRatios | 零件功能相关属性配置 | float列表(逗号分隔) |
-| Transmission | JTransmissionData | finalGearRatio | 零件功能相关属性配置 | float |
-| Transmission | JTransmissionData | gearProfile | 零件功能相关属性配置 | 枚举(JTransmissionData.JGearProfileType: Street、Racing、Offroad、Custom) |
-| Transmission | JTransmissionData | gearTuning | 零件功能相关属性配置 | float |
-| Transmission | JTransmissionData | numGears | 零件功能相关属性配置 | int |
-| Transmission | JTransmissionData | postShiftBan | 零件功能相关属性配置 | float |
-| Transmission | JTransmissionData | reverseGearRatio | 零件功能相关属性配置 | float |
-| Transmission | JTransmissionData | shiftDownRpm | 零件功能相关属性配置 | float |
-| Transmission | JTransmissionData | shiftDuration | 零件功能相关属性配置 | float |
-| Transmission | JTransmissionData | shiftGuardSpeedThreshold | 零件功能相关属性配置 | float |
-| Transmission | JTransmissionData | shiftUpRpm | 零件功能相关属性配置 | float |
+| Transmission | JTransmissionData | customGearRatios | 自定义档位传动比列表。 | float列表(逗号分隔) |
+| Transmission | JTransmissionData | finalGearRatio | 最终传动比。 | float |
+| Transmission | JTransmissionData | gearProfile | 档位预设曲线。 | 枚举(JTransmissionData.JGearProfileType: Street、Racing、Offroad、Custom) |
+| Transmission | JTransmissionData | gearTuning | 档位调校系数。 | float |
+| Transmission | JTransmissionData | numGears | 档位数量。 | int |
+| Transmission | JTransmissionData | postShiftBan | 换挡后锁止持续时间。 | float |
+| Transmission | JTransmissionData | reverseGearRatio | 倒档传动比。 | float |
+| Transmission | JTransmissionData | shiftDownRpm | 降档转速阈值。 | float |
+| Transmission | JTransmissionData | shiftDuration | 换挡持续时间。 | float |
+| Transmission | JTransmissionData | shiftGuardSpeedThreshold | 换挡保护速度阈值。 | float |
+| Transmission | JTransmissionData | shiftUpRpm | 升档转速阈值。 | float |
 | Transmission | JTransmissionData | size | 尺寸/大小 | float |
-| Transmission | JTransmissionData | transmissionType | 零件功能相关属性配置 | 枚举(JTransmissionData.JTransmissionType: Automatic、Manual) |
-| Transmission | JTransmissionData | variableShift | 零件功能相关属性配置 | float |
-| Transparency | TransparencyData | alwaysFindConnected | 零件功能相关属性配置 | bool |
-| Transparency | TransparencyData | hideBack | 零件功能相关属性配置 | bool |
-| Transparency | TransparencyData | hideFront | 零件功能相关属性配置 | bool |
-| Transparency | TransparencyData | hideInside | 零件功能相关属性配置 | bool |
-| Transparency | TransparencyData | opacity | 零件功能相关属性配置 | float |
-| Transparency | TransparencyData | overrideHide | 零件功能相关属性配置 | bool |
-| Wheel | JWheelData | brake | 零件功能相关属性配置 | float |
-| Wheel | JWheelData | duals | 零件功能相关属性配置 | bool |
-| Wheel | JWheelData | forcePoint | 零件功能相关属性配置 | float |
-| Wheel | JWheelData | frictionCirclePower | 零件功能相关属性配置 | float |
-| Wheel | JWheelData | frictionCircleStrength | 零件功能相关属性配置 | float |
-| Wheel | JWheelData | frictionPreset | 零件功能相关属性配置 | string |
-| Wheel | JWheelData | hideRims | 零件功能相关属性配置 | bool |
-| Wheel | JWheelData | magicEngineId | 零件功能相关属性配置 | int |
-| Wheel | JWheelData | reversed | 零件功能相关属性配置 | bool |
-| Wheel | JWheelData | rim | 零件功能相关属性配置 | string |
-| Wheel | JWheelData | rimOffset | 零件功能相关属性配置 | float |
+| Transmission | JTransmissionData | transmissionType | 变速箱类型。 | 枚举(JTransmissionData.JTransmissionType: Automatic、Manual) |
+| Transmission | JTransmissionData | variableShift | 可变换挡策略参数。 | float |
+| Transparency | TransparencyData | alwaysFindConnected | 计算透明度时始终包含已连接零件。 | bool |
+| Transparency | TransparencyData | hideBack | 是否隐藏背面。 | bool |
+| Transparency | TransparencyData | hideFront | 是否隐藏正面。 | bool |
+| Transparency | TransparencyData | hideInside | 是否隐藏内部面。 | bool |
+| Transparency | TransparencyData | opacity | 不透明度值。 | float |
+| Transparency | TransparencyData | overrideHide | 是否覆盖默认隐藏行为。 | bool |
+| Wheel | JWheelData | brake | 制动力度。 | float |
+| Wheel | JWheelData | duals | 是否双轮胎配置。 | bool |
+| Wheel | JWheelData | forcePoint | 受力点参数。 | float |
+| Wheel | JWheelData | frictionCirclePower | 摩擦圆功率参数。 | float |
+| Wheel | JWheelData | frictionCircleStrength | 摩擦圆强度参数。 | float |
+| Wheel | JWheelData | frictionPreset | 摩擦预设ID/名称。 | string |
+| Wheel | JWheelData | hideRims | 是否隐藏轮圈。 | bool |
+| Wheel | JWheelData | magicEngineId | 关联发动机ID。 | int |
+| Wheel | JWheelData | reversed | 是否反转车轮方向。 | bool |
+| Wheel | JWheelData | rim | 轮圈样式。 | string |
+| Wheel | JWheelData | rimOffset | 轮圈偏移。 | float |
 | Wheel | JWheelData | size | 尺寸/大小 | float |
-| Wheel | JWheelData | tire | 零件功能相关属性配置 | string |
-| Wheel | JWheelData | tractionForward | 零件功能相关属性配置 | float |
-| Wheel | JWheelData | tractionSideways | 零件功能相关属性配置 | float |
-| Wheel | JWheelData | turningAngle | 零件功能相关属性配置 | float |
-| Wheel | JWheelData | turningAngleDampening | 零件功能相关属性配置 | float |
-| Wheel | JWheelData | turningRate | 零件功能相关属性配置 | float |
-| Wheel | JWheelData | width | 零件功能相关属性配置 | float |
+| Wheel | JWheelData | tire | 轮胎样式。 | string |
+| Wheel | JWheelData | tractionForward | 前向抓地力系数。 | float |
+| Wheel | JWheelData | tractionSideways | 侧向抓地力系数。 | float |
+| Wheel | JWheelData | turningAngle | 最大转向角。 | float |
+| Wheel | JWheelData | turningAngleDampening | 转向角阻尼。 | float |
+| Wheel | JWheelData | turningRate | 转向速率。 | float |
+| Wheel | JWheelData | width | 车轮宽度系数。 | float |
 | Wheel | ResizableWheelData | brakeTorque | 扭矩/转矩 | float |
-| Wheel | ResizableWheelData | damper | 零件功能相关属性配置 | float |
-| Wheel | ResizableWheelData | direction | 零件功能相关属性配置 | string |
-| Wheel | ResizableWheelData | enableAutoTraction | 零件功能相关属性配置 | bool |
+| Wheel | ResizableWheelData | damper | 阻尼系数。 | float |
+| Wheel | ResizableWheelData | direction | 驱动/旋转方向。 | string |
+| Wheel | ResizableWheelData | enableAutoTraction | 是否启用自动牵引控制。 | bool |
 | Wheel | ResizableWheelData | enableSuspension | 悬挂系统调节 | bool |
-| Wheel | ResizableWheelData | engineId | 零件功能相关属性配置 | int |
-| Wheel | ResizableWheelData | hideRims | 零件功能相关属性配置 | bool |
+| Wheel | ResizableWheelData | engineId | 发动机ID。 | int |
+| Wheel | ResizableWheelData | hideRims | 是否隐藏轮圈。 | bool |
 | Wheel | ResizableWheelData | maxAngularVelocity | 最大值限制 | float |
 | Wheel | ResizableWheelData | size | 尺寸/大小 | float |
-| Wheel | ResizableWheelData | slipForwardAsymptote | 零件功能相关属性配置 | float |
-| Wheel | ResizableWheelData | slipForwardExtremum | 零件功能相关属性配置 | float |
-| Wheel | ResizableWheelData | slipSidewaysAsymptote | 零件功能相关属性配置 | float |
-| Wheel | ResizableWheelData | slipSidewaysExtremum | 零件功能相关属性配置 | float |
-| Wheel | ResizableWheelData | spring | 零件功能相关属性配置 | float |
-| Wheel | ResizableWheelData | tire | 零件功能相关属性配置 | string |
-| Wheel | ResizableWheelData | tractionForward | 零件功能相关属性配置 | float |
-| Wheel | ResizableWheelData | tractionSideways | 零件功能相关属性配置 | float |
-| Wheel | ResizableWheelData | turningAngle | 零件功能相关属性配置 | float |
-| Wheel | ResizableWheelData | turningRate | 零件功能相关属性配置 | float |
-| Wheel | ResizableWheelData | width | 零件功能相关属性配置 | float |
-| Wheel Suspension | JWheelSuspensionData | damper | 零件功能相关属性配置 | float |
-| Wheel Suspension | JWheelSuspensionData | extension | 零件功能相关属性配置 | float |
-| Wheel Suspension | JWheelSuspensionData | rideHeight | 零件功能相关属性配置 | float |
+| Wheel | ResizableWheelData | slipForwardAsymptote | 前向滑移渐近值。 | float |
+| Wheel | ResizableWheelData | slipForwardExtremum | 前向滑移极值。 | float |
+| Wheel | ResizableWheelData | slipSidewaysAsymptote | 侧向滑移渐近值。 | float |
+| Wheel | ResizableWheelData | slipSidewaysExtremum | 侧向滑移极值。 | float |
+| Wheel | ResizableWheelData | spring | 弹簧刚度。 | float |
+| Wheel | ResizableWheelData | tire | 轮胎样式。 | string |
+| Wheel | ResizableWheelData | tractionForward | 前向抓地力系数。 | float |
+| Wheel | ResizableWheelData | tractionSideways | 侧向抓地力系数。 | float |
+| Wheel | ResizableWheelData | turningAngle | 最大转向角。 | float |
+| Wheel | ResizableWheelData | turningRate | 转向速率。 | float |
+| Wheel | ResizableWheelData | width | 车轮宽度系数。 | float |
+| Wheel Suspension | JWheelSuspensionData | damper | 阻尼系数。 | float |
+| Wheel Suspension | JWheelSuspensionData | extension | 悬挂行程。 | float |
+| Wheel Suspension | JWheelSuspensionData | rideHeight | 离地高度。 | float |
 | Wheel Suspension | JWheelSuspensionData | shockPosition | 空间坐标位置 | float |
 | Wheel Suspension | JWheelSuspensionData | size | 尺寸/大小 | float |
-| Wheel Suspension | JWheelSuspensionData | stiffness | 零件功能相关属性配置 | float |
+| Wheel Suspension | JWheelSuspensionData | stiffness | 刚度系数。 | float |
 | Wheel Suspension | JWheelSuspensionData | suspensionLength | 悬挂系统调节 | float |
-| Winch | WinchData | attachPoint | 零件功能相关属性配置 | int |
+| Winch | WinchData | attachPoint | 绞盘缆绳连接点索引。 | int |
 | Winch | WinchData | breakScale | 缩放比例/系数 | float |
 | Winch | WinchData | range | 范围/行程/边界值 | float |
 | Winch | WinchData | speed | 运动或响应速度 | float |
-| Winch | WinchData | startRange | 零件功能相关属性配置 | float |
-| Winch | WinchData | volume | 零件功能相关属性配置 | float |
-| Wing | JWingData | axis | 零件功能相关属性配置 | string |
-| Wing | JWingData | chordSamples | 零件功能相关属性配置 | int |
-| Wing | JWingData | colliderSamples | 零件功能相关属性配置 | int |
-| Wing | JWingData | disableWingtipVortices | 零件功能相关属性配置 | bool |
-| Wing | JWingData | flipped | 零件功能相关属性配置 | bool |
-| Wing | JWingData | fuelFraction | 零件功能相关属性配置 | float |
+| Winch | WinchData | startRange | 初始缆绳长度/范围值。 | float |
+| Winch | WinchData | volume | 音量参数。 | float |
+| Wing | JWingData | axis | 轴向映射。 | string |
+| Wing | JWingData | chordSamples | 弦长采样数量。 | int |
+| Wing | JWingData | colliderSamples | 碰撞体采样数量。 | int |
+| Wing | JWingData | disableWingtipVortices | 是否禁用翼尖涡流。 | bool |
+| Wing | JWingData | flipped | 是否翻转翼型方向。 | bool |
+| Wing | JWingData | fuelFraction | 燃料比例。 | float |
 | Wing | JWingData | invert | 是否反向输出/取反 | bool |
-| Wing | JWingData | invertOnMirror | 零件功能相关属性配置 | bool |
+| Wing | JWingData | invertOnMirror | 镜像零件时是否反向。 | bool |
 | Wing | JWingData | liftScale | 缩放比例/系数 | float |
-| Wing | JWingData | partIds | 零件功能相关属性配置 | string |
-| Wing | JWingData | style | 零件功能相关属性配置 | string (legacy compatible style marker) |
-| Wing | JWingData | version | 零件功能相关属性配置 | int |
+| Wing | JWingData | partIds | 引用零件ID列表。 | string |
+| Wing | JWingData | style | 机翼样式兼容字段（主要用于迁移/旧版数据）。 | string (legacy compatible style marker) |
+| Wing | JWingData | version | 序列化数据版本。 | int |
 | Wing | JWingData | viscousDragScale | 缩放比例/系数 | float |
 | Wing | JWingData | zeroLiftDragScale | 缩放比例/系数 | float |
-| Wing | WingData | airfoil | 零件功能相关属性配置 | string |
-| Wing | WingData | allowControlSurfaces | 零件功能相关属性配置 | bool |
-| Wing | WingData | angleOfAttack | 零件功能相关属性配置 | float |
-| Wing | WingData | baseThickness | 零件功能相关属性配置 | float |
-| Wing | WingData | density | 零件功能相关属性配置 | float |
-| Wing | WingData | fuelPercentage | 零件功能相关属性配置 | float |
-| Wing | WingData | hingeDistance | 零件功能相关属性配置 | float |
-| Wing | WingData | inverted | 零件功能相关属性配置 | bool |
+| Wing | WingData | airfoil | 翼型类型。 | string |
+| Wing | WingData | allowControlSurfaces | 是否允许舵面控制。 | bool |
+| Wing | WingData | angleOfAttack | 攻角参数。 | float |
+| Wing | WingData | baseThickness | 根部厚度。 | float |
+| Wing | WingData | density | 密度参数。 | float |
+| Wing | WingData | fuelPercentage | 燃料百分比。 | float |
+| Wing | WingData | hingeDistance | 铰链距离。 | float |
+| Wing | WingData | inverted | 是否倒置标记。 | bool |
 | Wing | WingData | liftScale | 缩放比例/系数 | float |
 | Wing | WingData | minSectionLength | 最小值限制 | float |
-| Wing | WingData | rootLeadingOffset | 零件功能相关属性配置 | float |
-| Wing | WingData | rootTrailingOffset | 零件功能相关属性配置 | float |
-| Wing | WingData | tipLeadingOffset | 零件功能相关属性配置 | float |
+| Wing | WingData | rootLeadingOffset | 根部前缘偏移。 | float |
+| Wing | WingData | rootTrailingOffset | 根部后缘偏移。 | float |
+| Wing | WingData | tipLeadingOffset | 翼尖前缘偏移。 | float |
 | Wing | WingData | tipPosition | 空间坐标位置 | Vector3(x,y,z) |
-| Wing | WingData | tipThickness | 零件功能相关属性配置 | float |
-| Wing | WingData | tipTrailingOffset | 零件功能相关属性配置 | float |
+| Wing | WingData | tipThickness | 翼尖厚度。 | float |
+| Wing | WingData | tipTrailingOffset | 翼尖后缘偏移。 | float |

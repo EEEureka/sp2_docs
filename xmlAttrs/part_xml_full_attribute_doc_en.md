@@ -422,12 +422,12 @@
 | Pedal | PedalData | fullAngle | Full travel angle. | float |
 | Pedal | PedalData | input | Configures input for Pedal. | string |
 | Pedal | PedalData | zeroAngle | Zero position angle. | float |
-| Piston | PistonData | attachPoint | Configures attachPoint for Piston. | int |
-| Piston | PistonData | cycle | Configures cycle for Piston. | bool |
-| Piston | PistonData | extend | Configures extend for Piston. | bool |
+| Piston | PistonData | attachPoint | Attach point index for the piston moving end. | int |
+| Piston | PistonData | cycle | Whether the piston cycles repeatedly. | bool |
+| Piston | PistonData | extend | Piston direction mode (push/pull). | bool |
 | Piston | PistonData | maxRange | Maximum range value. | float |
 | Piston | PistonData | maxSpeed | Maximum speed limit. | float |
-| Piston | PistonData | preventBreaking | Configures preventBreaking for Piston. | bool |
+| Piston | PistonData | preventBreaking | Whether to prevent joint breakage under load. | bool |
 | Piston | PistonData | range | Operational range/travel. | float |
 | Piston | PistonData | speed | Speed/time process setting. | float |
 | Posed Grip | PosedGripData | asButton | Treat input as button mode. | bool |
@@ -490,15 +490,15 @@
 | Rocket | RocketWeaponData | finMode | Fin mode/config marker. | string |
 | Rocket | RocketWeaponData | firingDelay | Firing delay. | float |
 | Rocket | RocketWeaponData | laserGuided | Enable laser guidance. | bool |
-| Rocket | RocketWeaponData | name | Naming/text/interaction display setting. | string |
+| Rocket | RocketWeaponData | name | Custom rocket weapon name. | string |
 | Rocket | RocketWeaponData | selfDestructTimer | Self-destruct timer. | float |
 | Rocket Pod | RocketPodData | activationGroup | Activation group index used to trigger the part with key groups. | string |
 | Rocket Pod | RocketPodData | explosionScale | Explosion scale factor. | float |
 | Rocket Pod | RocketPodData | firingDelay | Firing delay. | float |
 | Rocket Pod | RocketPodData | laserGuided | Enable laser guidance. | bool |
-| Rocket Pod | RocketPodData | name | Naming/text/interaction display setting. | string |
+| Rocket Pod | RocketPodData | name | Custom rocket pod name. | string |
 | Rotator | JointRotatorData | allowFreeSpin | Allow free spinning. | bool |
-| Rotator | JointRotatorData | attachPoint | Configures attachPoint for Rotator. | int |
+| Rotator | JointRotatorData | attachPoint | Attach point index used by the rotator joint. | int |
 | Rotator | JointRotatorData | audio | Enable rotation audio. | bool |
 | Rotator | JointRotatorData | damperMultiplier | Damper multiplier. | float |
 | Rotator | JointRotatorData | disableBaseMesh | Hide base mesh. | bool |
@@ -533,7 +533,7 @@
 | Seat IK | IKSeatData | rightShoulderTarget | Right shoulder IK target. | int |
 | Seat IK | IKSeatData | selfAssignTargets | Auto assign IK targets. | bool |
 | Seat IK | IKSeatData | snapRange | IK snap range. | float |
-| Suspension | SuspensionData | attachPoint | Configures attachPoint for Suspension. | int |
+| Suspension | SuspensionData | attachPoint | Attach point index used by the suspension. | int |
 | Suspension | SuspensionData | damper | Damping factor. | float |
 | Suspension | SuspensionData | spring | Spring stiffness. | float |
 | Switch | CockpitSwitchData | angleOff | Off-state angle. | float |
@@ -602,7 +602,7 @@
 | Wheel | JWheelData | turningAngle | Maximum steering angle. | float |
 | Wheel | JWheelData | turningAngleDampening | Steering angle dampening. | float |
 | Wheel | JWheelData | turningRate | Steering rate. | float |
-| Wheel | JWheelData | width | Size/scale related setting. | float |
+| Wheel | JWheelData | width | Wheel width scale. | float |
 | Wheel | ResizableWheelData | brakeTorque | Brake torque. | float |
 | Wheel | ResizableWheelData | damper | Damping factor. | float |
 | Wheel | ResizableWheelData | direction | Drive/rotation direction. | string |
@@ -622,7 +622,7 @@
 | Wheel | ResizableWheelData | tractionSideways | Sideways traction coefficient. | float |
 | Wheel | ResizableWheelData | turningAngle | Maximum steering angle. | float |
 | Wheel | ResizableWheelData | turningRate | Steering rate. | float |
-| Wheel | ResizableWheelData | width | Size/scale related setting. | float |
+| Wheel | ResizableWheelData | width | Wheel width scale. | float |
 | Wheel Suspension | JWheelSuspensionData | damper | Damping factor. | float |
 | Wheel Suspension | JWheelSuspensionData | extension | Suspension extension. | float |
 | Wheel Suspension | JWheelSuspensionData | rideHeight | Ride height. | float |
@@ -630,7 +630,7 @@
 | Wheel Suspension | JWheelSuspensionData | size | Size/scale related setting. | float |
 | Wheel Suspension | JWheelSuspensionData | stiffness | Stiffness coefficient. | float |
 | Wheel Suspension | JWheelSuspensionData | suspensionLength | Suspension travel length. | float |
-| Winch | WinchData | attachPoint | Configures attachPoint for Winch. | int |
+| Winch | WinchData | attachPoint | Attach point index used by the winch cable end. | int |
 | Winch | WinchData | breakScale | Break threshold scale. | float |
 | Winch | WinchData | range | Operational range/travel. | float |
 | Winch | WinchData | speed | Speed/time process setting. | float |
