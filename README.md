@@ -15,7 +15,7 @@ The repository currently includes:
 
 - **These documents are generated from AI-assisted extraction and may contain inaccuracies in field descriptions.**
 - **Some fields may not be available or functional in the game.**
-- **If any field does not work as expected, please report it so we can improve the documentation.**
+- **If any field does not work as expected, please report it , I will fix it when I have time, and you can also contribute by submitting a Pull Request.**
 
 ## Documentation Entry
 
