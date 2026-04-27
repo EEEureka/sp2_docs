@@ -13,9 +13,9 @@ The repository currently includes:
 
 ## Important Notice
 
-- These documents are generated from AI-assisted extraction and may contain inaccuracies in field descriptions.
-- Some fields may not be available or functional in the game.
-- If any field does not work as expected, please report it so we can improve the documentation.
+- **These documents are generated from AI-assisted extraction and may contain inaccuracies in field descriptions.**
+- **Some fields may not be available or functional in the game.**
+- **If any field does not work as expected, please report it so we can improve the documentation.**
 
 ## Documentation Entry
 
