@@ -3,6 +3,13 @@
 - Total attribute rows: 654
 - Parts without unique attributes: 5
 
+## Note:
+- This document is generated from AI-assisted extraction and may contain inaccuracies in field descriptions.
+- Boolean values are represented as true/false.
+- For enum types, the value in XML should be a string that matches the case and format of the original enum object. For example, if the document lists an enum as "Enum(CannonData.ProjectileStyle: Sphere, Slug)", then in the XML it should be written as "Sphere" or "Slug", not in lowercase or any other variation.
+
+## Attribute List
+
 | Part Category | Part Class | Attribute | Description | Input Type |
 | --- | --- | --- | --- | --- |
 | Advanced Performance Scalars | RotorPerfScalarsData | collectiveDrag | Power/aerodynamics/physics parameter. | float |

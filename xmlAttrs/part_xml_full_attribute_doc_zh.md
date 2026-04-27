@@ -3,6 +3,14 @@
 - 属性行总数: 654
 - 无独有属性零件数: 5
 
+## 提示:
+
+- 该文档由 AI 捞取后生成，字段描述可能存在错误或偏差。
+- bool类型数值写为true/false
+- 枚举类型在xml中应写为字符串，保持大小写和原有枚举对象一致，如文档中提供枚举“枚举(CannonData.ProjectileStyle: Sphere、Slug)”，则xml中应写为“Sphere”或“Slug”，而非全小写或其他变体。
+
+## 属性列表
+
 | 零件类别 | 零件类名 | 属性名 | 作用说明 | 输入类型 |
 | --- | --- | --- | --- | --- |
 | Advanced Performance Scalars | RotorPerfScalarsData | collectiveDrag | 主旋翼总距对应的阻力缩放系数 | float |
