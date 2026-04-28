@@ -165,21 +165,3 @@
 | Event/Signal | `Yaw Rate` | Yaw angular-rate output (unit **°/s**) | `number(float)` | `CockpitScript` (Cockpit) |
 | Event/Signal (Dynamic Declaration) | `<custom variable name>` (`<自定义变量名>`) | Non-fixed label: variable name comes from part configuration (usually input ID; if it contains `:`, only prefix is used). Therefore it does not appear in fixed `[VariableOutput]` lists | `number(float)` | `CockpitButtonScript` (Cockpit Button), `CockpitSwitchScript` (Cockpit Switch) |
 | Event/Signal (Dynamic Declaration) | `<axis variable name>` (`<轴变量名>`) | Non-fixed label: comes from XR control-axis `Variable.Name` (dynamically determined by `ControlBase` axis configuration) | `number(float)` | `XR/ControlBaseScript` (XR Control Base) |
-
----
-
-## Usage Notes (recommended at document end)
-
-- Parameter names should follow source-case exactly (expression context keys are registered by string).
-- Event/signal parameters are polled values, not `onEvent()` callbacks.
-- Besides fixed `[VariableOutput]` labels, some parts declare variable names dynamically via `IVariableDeclarations`; such names are configuration-driven and are not pre-listed in static label inventories.
-- In `VariableOutput`, only a few have default variable mappings (e.g., `RotorRPM`); most need manual naming in variable-output configuration before use.
-
-## Progress Update (this round)
-
-- ✅ Verified true types and method inputs for `[Exposed]` members  
-- ✅ Verified default constants/function signatures in `Context`  
-- ✅ Verified parameter/return behavior in `SpecialFunctions`  
-- ✅ Verified output types for `VariableOutput` labels (all are `float`)
-
-If you want, next I can also package this into a cleaner final file (e.g., `Game/Todo/funky-tree-parameter-catalog.md`) and add a side-by-side bilingual table version.

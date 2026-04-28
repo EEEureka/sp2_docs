@@ -165,21 +165,3 @@
 | 事件/信号 | `Yaw Rate` | 偏航角速度输出（单位 **°/s**） | `number(float)` | `CockpitScript`（座舱） |
 | 事件/信号（动态声明） | `<自定义变量名>` | 非固定标签：变量名来自零件配置（通常取输入ID；若含 `:` 只取前缀）。因此不会出现在固定 `[VariableOutput]` 列表里 | `number(float)` | `CockpitButtonScript`（座舱按钮）、`CockpitSwitchScript`（座舱开关） |
 | 事件/信号（动态声明） | `<轴变量名>` | 非固定标签：来自 XR 控件轴的 `Variable.Name`（由 `ControlBase` 轴配置动态决定） | `number(float)` | `XR/ControlBaseScript`（XR 控件基座） |
-
----
-
-## 使用备注（建议放在文档页尾）
-
-- 参数名建议按源码大小写使用（表达式上下文是按字符串键注册）。
-- 事件/信号类参数是轮询值，不是 `onEvent()` 回调。
-- 除固定 `[VariableOutput]` 标签外，部分零件通过 `IVariableDeclarations` 动态声明变量名；这类名称由零件配置决定，不会提前固化在静态标签清单中。
-- `VariableOutput` 中仅少数有默认变量映射（例如 `RotorRPM`）；多数需要在变量输出配置里手动命名后再引用。
-
-## 本轮进度更新
-
-- ✅ 已核对 `[Exposed]` 成员真实类型与方法入参  
-- ✅ 已核对 `Context` 默认常量/函数签名  
-- ✅ 已核对 `SpecialFunctions` 参数与返回  
-- ✅ 已核对 `VariableOutput` 标签对应输出类型（均为 `float`）
-
-如果你需要，我下一步可以把这份表直接整理成 `Markdown` 文件（例如 `Game/Todo/funky-tree-参数总表.md`），并再附一版英文对照列。
