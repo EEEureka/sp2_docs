@@ -7,7 +7,7 @@
 - Time-related values: unit is **seconds (s)**
 - Distance / altitude / coordinate-related values: use game world coordinate units (Unity world unit, typically interpreted as meters in this project).
 - Speed-related values: world coordinate units per second (typically interpreted as **m/s**).
-- In this project, `Latitude`/`Longitude` are axis coordinates (`z/x`), **not geographic latitude/longitude degrees, game units are typically interpreted as meters**.
+- In this project, `Latitude`/`Longitude` are axis coordinates (`z/x`), **not geographic latitude/longitude degrees, typically interpreted as meters in the project**.
 
 ### Constants
 
