@@ -10,6 +10,7 @@ The repository currently includes:
 
 - Collection and organization of XML attributes unique to each part.
 - The related documentation is available in the `xmlAttrs` directory.
+- Documentation for **Funky Tree** (the variable system in **SimplePlanes 2**) in bilingual versions under the `funkyTree` directory.
 
 ## Important Notice
 
@@ -20,6 +21,7 @@ The repository currently includes:
 ## Documentation Entry
 
 - [Part XML Full Attribute Documentation (English)](./xmlAttrs/part_xml_full_attribute_doc_en.md)
+- [Funky Tree Variable System Documentation (English)](./funkyTree/funky_tree_en.md)
 
 ## Contributing
 
