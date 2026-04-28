@@ -2,12 +2,12 @@
 
 ### Unit Conventions (Based on Source Code)
 
-- Angle-related values: unit is **degrees (°)**. The source frequently uses `* 57.29578f` (i.e., rad→deg).
-- Angular-rate-related values: unit is **degrees per second (°/s)**. Derived from `angularVelocity` (rad/s) multiplied by `57.29578f`.
-- Time-related values: unit is **seconds (s)** (e.g., `Time.time`, `deltaTime`).
+- Angle-related values: unit is **degrees (°)**.
+- Angular-rate-related values: unit is **degrees per second (°/s)**.
+- Time-related values: unit is **seconds (s)**
 - Distance / altitude / coordinate-related values: use game world coordinate units (Unity world unit, typically interpreted as meters in this project).
 - Speed-related values: world coordinate units per second (typically interpreted as **m/s**).
-- In this project, `Latitude`/`Longitude` are axis coordinates (`z/x`), **not geographic latitude/longitude degrees**.
+- In this project, `Latitude`/`Longitude` are axis coordinates (`z/x`), **not geographic latitude/longitude degrees, game units are typically interpreted as meters**.
 
 ### Constants
 
