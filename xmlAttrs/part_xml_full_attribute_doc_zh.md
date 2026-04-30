@@ -70,10 +70,10 @@
 | Cannon | CannonData | flashScale | 枪口闪光缩放 | float |
 | Cannon | CannonData | flashSpace | 枪口闪光粒子模拟空间 | 枚举(ParticleSystemSimulationSpace: Local、World、Custom；Custom会回落为Local) |
 | Cannon | CannonData | function | 武器用途模式（空对空/空对地/多用途） | 枚举(WeaponFunction: 无、AirToAir、AirToSurface、MultiRole) |
-| Cannon | CannonData | fuseInput | 引信触发输入ID | string |
-| Cannon | CannonData | impactDamageScalar | 直接命中伤害倍率 | float |
+| Cannon | CannonData | fuseInput | 引信触发表达式 | string |
+| Cannon | CannonData | impactDamageScalar | 撞击命中伤害倍率 | float |
 | Cannon | CannonData | launchVolume | 发射音量 | float |
-| Cannon | CannonData | muzzleBrake | 是否启用枪口制退器 | bool |
+| Cannon | CannonData | muzzleBrake | 是否启用炮口制退器 | bool |
 | Cannon | CannonData | name | 自定义名称 | string |
 | Cannon | CannonData | projectileLifetime | 弹丸生命周期（秒） | float |
 | Cannon | CannonData | projectileStyle | 弹丸几何外形样式 | 枚举(CannonData.ProjectileStyle: Sphere、Slug) |
