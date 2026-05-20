@@ -44,29 +44,25 @@ $$
 
 > This parameter represents the target signal strength received by the missile seeker, and is affected by both target type and seeker type.
 
-#### 2.2.1 Signature values against ground targets
+#### 2.2.1 Signature Matrix (by target type × seeker mode)
 
-- Infrared seeker: 100
-- Radar seeker: 50
-- Anti-radiation seeker: 250
+| Seeker mode \ Target type | Ground target | Laser-designator target | Player target |
+|---|---:|---:|---|
+| Unguided | - | - | 0 |
+| Infrared seeker | 100 | - | [See Infrared seeker algorithm](#signature-player-ir) |
+| Radar seeker | 50 | - | [See Radar seeker algorithm](#signature-player-radar) |
+| Laser seeker | - | 1 | 0 |
+| Anti-radiation seeker | 250 | - | 100 |
 
-#### 2.2.2 Signature values against laser-designator targets
+> Note: `-` means this combination is unsupported or has no fixed value defined in this document.
 
-- Laser seeker: 1
+#### 2.2.2 Detailed algorithm for player targets (Infrared/Radar only)
 
-#### 2.2.3 Signature values against player targets
+The calculation for Infrared/Radar seekers (player aircraft) is more complex and changes dynamically with aircraft state.
 
-##### Generic seekers
+<a id="signature-player-ir"></a>
 
-- Unguided: 0
-- Laser seeker: 0
-- Anti-radiation seeker: 100
-
-##### Infrared / Radar seekers (player aircraft)
-
-The calculation is more complex and changes dynamically with the player aircraft state.
-
-###### Infrared seeker
+###### Infrared seeker (player target)
 
 1. First compute target infrared value `targetIR`:
    - If fuel is available: iterate all engines currently connected to the cockpit and sum each engine's infrared Signature;
@@ -102,7 +98,9 @@ $$
 afterburnerPercent=\mathrm{clamp01}\left(\frac{\text{throttle}-\text{AfterburnerThrottleStart}}{1-\text{AfterburnerThrottleStart}}\right)
 $$
 
-###### Radar seeker
+<a id="signature-player-radar"></a>
+
+###### Radar seeker (player target)
 
 Algorithm:
 
@@ -127,15 +125,8 @@ Notes:
 
 - When the target's `evade/break lock probability` increases, a random check is triggered;
 - if that check fails, then:
-  - `LockPercentage = 0`
-  - `_timeUntilCanLock = 1.5f` (a 1.5-second cooldown before lock can start again)
-
-These probabilities mainly come from the `PlayerTarget` + countermeasure script chain:
-
-- `PlayerTarget.cs` (`AddEvadeLockProbability` / `AddBreakLockProbability`)
-- `CounterMeasureScript.cs`
-- `CounterMeasureDispenserData.cs`
-
+  - Lock progress resets to 0
+  - 1.5-second cooldown before lock can start again
 ---
 
 ## 4. Key Non-XML (Hardcoded / Code-Constant) Items

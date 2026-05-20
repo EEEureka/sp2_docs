@@ -44,29 +44,25 @@ $$
 
 > 该参数表示导弹导引头接收的目标信号特征强度，受目标类型与导引头类型影响。
 
-#### 2.2.1 对地面目标时的 Signature 取值
+#### 2.2.1 Signature 取值矩阵（按目标类型 × 导引头模式）
 
-- 红外导引头：100
-- 雷达导引头：50
-- 反辐射导引头：250
+| 导引头模式 \ 目标类型 | 地面目标 | 激光指示器目标 | 玩家目标 |
+|---|---:|---:|---|
+| 无导引头 | - | - | 0 |
+| 红外导引头 | 100 | - | [见红外导引头算法](#signature-player-ir) |
+| 雷达导引头 | 50 | - | [见雷达导引头算法](#signature-player-radar) |
+| 激光导引头 | - | 1 | 0 |
+| 反辐射导引头 | 250 | - | 100 |
 
-#### 2.2.2 对激光指示器目标时的 Signature 取值
+> 说明：`-` 表示该组合不支持或本文档未定义固定值。
 
-- 激光导引头：1
+#### 2.2.2 对玩家目标时的详细算法（仅红外/雷达导引头）
 
-#### 2.2.3 对玩家目标时的 Signature 取值
+红外/雷达导引头（玩家飞机）的计算较复杂，会根据玩家飞机状态动态变化。
 
-##### 一般导引头
+<a id="signature-player-ir"></a>
 
-- 无导引头：0
-- 激光导引头：0
-- 反辐射导引头：100
-
-##### 红外/雷达导引头（玩家飞机）
-
-计算相对复杂，会根据玩家飞机状态动态变化。
-
-###### 红外导引头
+###### 红外导引头（玩家目标）
 
 1. 先计算目标红外值 `targetIR`：
    - 有燃油时：遍历当前连接到驾驶舱的所有引擎，累加每种发动机的红外 Signature；
@@ -102,7 +98,9 @@ $$
 afterburnerPercent=\mathrm{clamp01}\left(\frac{\text{throttle}-\text{AfterburnerThrottleStart}}{1-\text{AfterburnerThrottleStart}}\right)
 $$
 
-###### 雷达导引头
+<a id="signature-player-radar"></a>
+
+###### 雷达导引头（玩家目标）
 
 算法：
 
@@ -127,14 +125,8 @@ $$
 
 - 当目标的 `evade/break lock probability` 上升时，会触发一次随机判定；
 - 若判定失败，则直接：
-  - `LockPercentage = 0`
-  - `_timeUntilCanLock = 1.5f`（1.5 秒冷却后才能重新锁定）
-
-这些概率主要来自 `PlayerTarget` + 反制措施脚本链路：
-
-- `PlayerTarget.cs`（`AddEvadeLockProbability` / `AddBreakLockProbability`）
-- `CounterMeasureScript.cs`
-- `CounterMeasureDispenserData.cs`
+  - 锁定进度归零
+  - 1.5 秒冷却后才能重新锁定
 
 ---
 
