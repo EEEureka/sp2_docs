@@ -9,6 +9,7 @@
 - 各个零件独有 XML 属性的捞取与整理。
 - 对应文档位于 `xmlAttrs` 目录。
 - 已补充 **Funky Tree**（**SimplePlanes 2** 中的变量系统）文档，位于 `funkyTree` 目录，并提供中英文版本。
+- 已补充导弹武器锁定时长文档，位于 `docs/missileWeapons` 目录，并提供中英文版本。
 
 ## 使用提醒（重要）
 
@@ -20,6 +21,7 @@
 
 - [零件 XML 全属性文档（中文）](../xmlAttrs/part_xml_full_attribute_doc_zh.md)
 - [Funky Tree 变量系统文档（中文）](../funkyTree/funky_tree_zh.md)
+- [导弹武器锁定时长（中文）](../missileWeapons/missile_weapons_zh.md)
 
 ## 贡献
 

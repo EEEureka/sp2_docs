@@ -1,6 +1,6 @@
 # SimplePlanes2 Documentation
 
-For Chinese players: [简体中文文档入口（README）](./docs/README.md)
+For Chinese players: [简体中文文档入口（README）](./docs/readme/README.md)
 
 This repository is used to store detailed knowledge related to the **SimplePlanes 2** game.
 
@@ -11,6 +11,7 @@ The repository currently includes:
 - Collection and organization of XML attributes unique to each part.
 - The related documentation is available in the `xmlAttrs` directory.
 - Documentation for **Funky Tree** (the variable system in **SimplePlanes 2**) in bilingual versions under the `funkyTree` directory.
+- Documentation for missile weapon lock-on duration under `docs/missileWeapons`, with bilingual versions.
 
 ## Important Notice
 
@@ -22,6 +23,7 @@ The repository currently includes:
 
 - [Part XML Full Attribute Documentation (English)](./xmlAttrs/part_xml_full_attribute_doc_en.md)
 - [Funky Tree Variable System Documentation (English)](./funkyTree/funky_tree_en.md)
+- [Missile Weapon Lock-on Duration (English)](./docs/missileWeapons/missile_weapons_en.md)
 
 ## Contributing
 
