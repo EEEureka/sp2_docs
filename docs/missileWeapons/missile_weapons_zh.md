@@ -5,31 +5,37 @@
 ### 1.1 锁定速率 $r$
 
 - 先计算锁定速率 $r$：
-  $$
-  r=\max\left(\mathrm{clamp}\left(\frac{\text{signature}}{\text{distance}}\cdot \text{SeekerSensitivity},\,0,\,2\right),\,0.1\right)
-  $$
+
+```math
+r=\max\left(\mathrm{clamp}\left(\frac{\text{signature}}{\text{distance}}\cdot \text{SeekerSensitivity},\,0,\,2\right),\,0.1\right)
+```
+
 - 若为连续照射锁，则再乘以 $1.5$：
-  $$
-  r \leftarrow 1.5r
-  $$
+
+```math
+r \leftarrow 1.5r
+```
 
 ### 1.2 锁定进度 $L$
 
 - 锁定进度更新为：
-  $$
-  L_{t+\Delta t}=\min(1,\,L_t+r\Delta t)
-  $$
+
+```math
+L_{t+\Delta t}=\min(1,\,L_t+r\Delta t)
+```
+
   其中 $L$ 表示锁定进度百分比，当 $L=1$ 时即为已锁定状态。
 - 取消对目标锁定后，锁定进度会衰减：
-  $$
-  L_{t+\Delta t}=\max(0,\,L_t-0.5\Delta t)
-  $$
+
+```math
+L_{t+\Delta t}=\max(0,\,L_t-0.5\Delta t)
+```
 
 ### 1.3 理论锁定时长（不被干扰）
 
-$$
+```math
 T_{\text{lock}}=\frac{1}{r}
-$$
+```
 
 ## 2. 关键参数说明
 
@@ -73,17 +79,17 @@ $$
 
 即：
 
-$$
+```math
 IR_{target}=
 \begin{cases}
 0.25\cdot\sum IR_{engine}, & Fuel>0 \\
 0, & Fuel\le 0
 \end{cases}
-$$
+```
 
-$$
+```math
 IR_{new}=StepTowards(IR_{old},\,250\cdot\Delta t,\,IR_{target})
-$$
+```
 
 各类型发动机的 IRSignature 计算方式：
 
@@ -94,9 +100,9 @@ $$
 
 加力节流阀计算：
 
-$$
+```math
 afterburnerPercent=\mathrm{clamp01}\left(\frac{\text{throttle}-\text{AfterburnerThrottleStart}}{1-\text{AfterburnerThrottleStart}}\right)
-$$
+```
 
 <a id="signature-player-radar"></a>
 
@@ -109,9 +115,9 @@ $$
 
 即：
 
-$$
+```math
 RadarSignature=\sum_{part}(D_f+D_b+D_l+D_r+D_d+D_u)+WingSurfaceArea
-$$
+```
 
 注意：
 

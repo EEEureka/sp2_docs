@@ -5,31 +5,37 @@
 ### 1.1 Lock-on Rate $r$
 
 - First, compute the lock-on rate $r$:
-  $$
-  r=\max\left(\mathrm{clamp}\left(\frac{\text{signature}}{\text{distance}}\cdot \text{SeekerSensitivity},\,0,\,2\right),\,0.1\right)
-  $$
+
+```math
+r=\max\left(\mathrm{clamp}\left(\frac{\text{signature}}{\text{distance}}\cdot \text{SeekerSensitivity},\,0,\,2\right),\,0.1\right)
+```
+
 - If it is a continuous-illumination lock, multiply by $1.5$:
-  $$
-  r \leftarrow 1.5r
-  $$
+
+```math
+r \leftarrow 1.5r
+```
 
 ### 1.2 Lock Progress $L$
 
 - Lock progress updates as:
-  $$
-  L_{t+\Delta t}=\min(1,\,L_t+r\Delta t)
-  $$
+
+```math
+L_{t+\Delta t}=\min(1,\,L_t+r\Delta t)
+```
+
   where $L$ is the lock progress percentage. When $L=1$, the target is considered fully locked.
 - After canceling lock on the target, lock progress decays as:
-  $$
-  L_{t+\Delta t}=\max(0,\,L_t-0.5\Delta t)
-  $$
+
+```math
+L_{t+\Delta t}=\max(0,\,L_t-0.5\Delta t)
+```
 
 ### 1.3 Theoretical Lock Time (without interference)
 
-$$
+```math
 T_{\text{lock}}=\frac{1}{r}
-$$
+```
 
 ## 2. Key Parameters
 
@@ -73,17 +79,17 @@ The calculation for Infrared/Radar seekers (player aircraft) is more complex and
 
 That is:
 
-$$
+```math
 IR_{target}=
 \begin{cases}
 0.25\cdot\sum IR_{engine}, & Fuel>0 \\
 0, & Fuel\le 0
 \end{cases}
-$$
+```
 
-$$
+```math
 IR_{new}=StepTowards(IR_{old},\,250\cdot\Delta t,\,IR_{target})
-$$
+```
 
 IRSignature calculation differs by engine type:
 
@@ -94,9 +100,9 @@ IRSignature calculation differs by engine type:
 
 Afterburner throttle percentage:
 
-$$
+```math
 afterburnerPercent=\mathrm{clamp01}\left(\frac{\text{throttle}-\text{AfterburnerThrottleStart}}{1-\text{AfterburnerThrottleStart}}\right)
-$$
+```
 
 <a id="signature-player-radar"></a>
 
@@ -109,9 +115,9 @@ Algorithm:
 
 So:
 
-$$
+```math
 RadarSignature=\sum_{part}(D_f+D_b+D_l+D_r+D_d+D_u)+WingSurfaceArea
-$$
+```
 
 Notes:
 
